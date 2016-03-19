@@ -23,10 +23,10 @@ public class Board {
         Map<Integer, String> lookedAtBefore;
 
         //rows
-        for (int i=0; i <=8; i++) {
+        for (int i=0; i < MAX_ROW_SIZE; i++) {
             rowValid = true;
             lookedAtBefore = new HashMap<Integer, String>();
-            for (int j = 0; j <= 8; j++) {
+            for (int j = 0; j < MAX_ROW_SIZE; j++) {
                 content = board[i][j];
                 if (!content.equalsIgnoreCase("-")) {
                     if (lookedAtBefore.containsValue(content)) {
@@ -54,10 +54,10 @@ public class Board {
         String content;
         Map<Integer, String> lookedAtBefore;
 
-        for (int i=0; i <=8; i++) {
+        for (int i=0; i < MAX_COL_SIZE; i++) {
             colValid = true;
             lookedAtBefore = new HashMap<Integer, String>();
-            for (int j = 0; j <= 8; j++) {
+            for (int j = 0; j < MAX_COL_SIZE; j++) {
                 content = board[j][i];
                 if (!content.equalsIgnoreCase("-")) {
                     if (lookedAtBefore.containsValue(content)) {
